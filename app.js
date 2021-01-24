@@ -4,17 +4,25 @@ function numberInput(numberClicked){
 }
 
 function operator(operatorType){
+
     if(operatorType == '+'){
     plusMinusSubtractDivide = 'plus'; 
-    oldNumber = firstNumber;  
-    firstNumber = 0;
     }
-   
+    else if(operatorType == '-'){
+        plusMinusSubtractDivide = 'minus'; 
+        }
+
+    oldNumber = firstNumber;  
+    firstNumber = 0;   
 }
 
-function showResult(){
+function calculateResult(){
+
     if(plusMinusSubtractDivide == 'plus'){
-        result = oldNumber + firstNumber;
-        console.log(result);
+        result = oldNumber + firstNumber;       
+    }else if(plusMinusSubtractDivide == 'minus'){
+        result = oldNumber - firstNumber;       
     }
+
+    console.log(result);
 }
