@@ -1,0 +1,14 @@
+.grid {
+  height: 480px;
+  width: 300px;
+  border: solid black;
+  background-color: rgb(233, 236, 233);
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid div {
+  height: 90px;
+  width: 90px;
+  background-color: rgb(208, 229, 247);
+  border: solid black;
+}
