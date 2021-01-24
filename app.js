@@ -5,7 +5,7 @@ function numberInput(numberClicked){
 
 function operator(operatorType){
     if(operatorType == '+'){
-    plusMinusSubtract = 'plus'; 
+    plusMinusSubtractDivide = 'plus'; 
     oldNumber = firstNumber;  
     firstNumber = 0;
     }
@@ -13,7 +13,7 @@ function operator(operatorType){
 }
 
 function showResult(){
-    if(plusMinusSubtract == 'plus'){
+    if(plusMinusSubtractDivide == 'plus'){
         result = oldNumber + firstNumber;
         console.log(result);
     }
