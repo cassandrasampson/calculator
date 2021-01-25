@@ -11,6 +11,12 @@ function operator(operatorType){
     else if(operatorType == '-'){
         plusMinusSubtractDivide = 'minus'; 
         }
+    else if(operatorType == '*'){
+        plusMinusSubtractDivide = 'multiply'; 
+        }
+    else if(operatorType == '/'){
+        plusMinusSubtractDivide = 'divide'; 
+        }
 
     oldNumber = firstNumber;  
     firstNumber = 0;   
@@ -22,7 +28,11 @@ function calculateResult(){
         result = oldNumber + firstNumber;       
     }else if(plusMinusSubtractDivide == 'minus'){
         result = oldNumber - firstNumber;       
+    }else if(plusMinusSubtractDivide == 'multiply'){
+        result = oldNumber * firstNumber;       
+    }else if(plusMinusSubtractDivide == 'divide'){
+        result = oldNumber / firstNumber;       
     }
 
-    console.log(result);
+    document.getElementById("displayMenu").innerHTML=result;
 }

@@ -2,13 +2,28 @@
   height: 480px;
   width: 300px;
   border: solid black;
-  background-color: rgb(233, 236, 233);
+  background-color: rgb(140, 199, 255);
+}
+
+.buttonsGrid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-.grid div {
+
+.button {
+  margin: 3px;
+  height: 60px;
+  width: 60px;
+  background-color: rgb(255, 169, 119);
+  border: solid black 1px;
+  text-align: center;
+}
+
+.display {
+  margin: 10px auto;
   height: 90px;
-  width: 90px;
-  background-color: rgb(208, 229, 247);
-  border: solid black;
+  width: 260px;
+  border: solid black 1px;
+  background-color: rgb(250, 241, 120);
 }
