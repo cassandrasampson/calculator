@@ -1,5 +1,13 @@
+function clearDisplay(){
+    document.getElementById("displayMenu").innerHTML='';
+    result = '';
+    oldNumber = '';
+    firstNumber = '';
+}
+
 function numberInput(numberClicked){
     firstNumber = numberClicked;
+    console.log("clicked number");
     
 }
 
@@ -36,3 +44,4 @@ function calculateResult(){
 
     document.getElementById("displayMenu").innerHTML=result;
 }
+
