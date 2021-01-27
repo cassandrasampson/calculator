@@ -1,14 +1,10 @@
-function clearDisplay(){
-    document.getElementById("displayMenu").innerHTML='';
-    result = '';
-    oldNumber = '';
-    firstNumber = '';
-}
+let numberToDisplay='';
 
-function numberInput(numberClicked){
-    firstNumber = numberClicked;
-    console.log("clicked number");
-    
+function numberInput(numberClicked){  
+    numberToDisplay.toString();
+    numberToDisplay = numberToDisplay + numberClicked;   
+
+    showInDisplay(numberToDisplay);   
 }
 
 function operator(operatorType){
@@ -28,6 +24,7 @@ function operator(operatorType){
 
     oldNumber = firstNumber;  
     firstNumber = 0;   
+    
 }
 
 function calculateResult(){
@@ -43,5 +40,16 @@ function calculateResult(){
     }
 
     document.getElementById("displayMenu").innerHTML=result;
+}
+
+function clearDisplay(){
+    document.getElementById("displayMenu").innerHTML='';
+    result = '';
+    oldNumber = '';
+    firstNumber = '';
+}
+
+function showInDisplay(display){
+    document.getElementById("displayMenu").innerHTML=display;
 }
 
