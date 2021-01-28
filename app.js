@@ -1,8 +1,8 @@
 let numberToDisplay='';
 
 function numberInput(numberClicked){  
-    numberToDisplay.toString();
-    numberToDisplay = numberToDisplay + numberClicked;   
+
+numberToDisplay = numberToDisplay + numberClicked;
 
     showInDisplay(numberToDisplay);   
 }
@@ -21,22 +21,25 @@ function operator(operatorType){
     else if(operatorType == '/'){
         plusMinusSubtractDivide = 'divide'; 
         }
-
-    oldNumber = firstNumber;  
-    firstNumber = 0;   
     
+        firstNumber = numberToDisplay;
+        numberToDisplay = '';
+
+        showInDisplay(numberToDisplay);            
 }
 
 function calculateResult(){
+numberToDisplay = parseInt(numberToDisplay);
+firstNumber = parseInt(firstNumber);
 
     if(plusMinusSubtractDivide == 'plus'){
-        result = oldNumber + firstNumber;       
+        result = numberToDisplay + firstNumber;       
     }else if(plusMinusSubtractDivide == 'minus'){
-        result = oldNumber - firstNumber;       
+        result = numberToDisplay - firstNumber;       
     }else if(plusMinusSubtractDivide == 'multiply'){
-        result = oldNumber * firstNumber;       
+        result = numberToDisplay * firstNumber;       
     }else if(plusMinusSubtractDivide == 'divide'){
-        result = oldNumber / firstNumber;       
+        result = firstNumber / numberToDisplay;       
     }
 
     document.getElementById("displayMenu").innerHTML=result;
@@ -45,7 +48,7 @@ function calculateResult(){
 function clearDisplay(){
     document.getElementById("displayMenu").innerHTML='';
     result = '';
-    oldNumber = '';
+    numberToDisplay = '';
     firstNumber = '';
 }
 
